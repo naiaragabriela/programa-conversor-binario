@@ -1,30 +1,25 @@
-﻿int numero, resto;
+﻿int valor, resto, quociente;
 
 int[] binario = new int[8];
+int[] convertido = new int[8];
 
-int numeroDigitado()
+Console.WriteLine("Informe um número inteiro a ser convertido");
+valor = int.Parse(Console.ReadLine());
+
+convertido = converter(valor);
+int[] converter (int valor)
 {
-    Console.WriteLine("Informe um número: ");
-    return int.Parse(Console.ReadLine()); 
+    quociente = valor;
+    for (int i = 0; i < binario.Length; i++)
+    {
+        resto = quociente % 2;
+        binario[i] = resto;
+        quociente = valor / 2;
+        valor = quociente;
+    }
+    return binario;
 }
-numero = numeroDigitado();
-
-int converterBinario()
+ for (int i = binario.Length -1; i>= 0; i--)
 {
-    resto = numero % 2;
-    numero = numero / 2;
-    return resto;
-}
-
-int contador = 7;
-do
-{
-    binario[contador] = converterBinario();
-    contador--;
-} while (contador >= 0);
-
-
-for (int posicao = 0; posicao < 8; posicao++)
-{
-    Console.Write(binario[posicao] + " ");
+    Console.Write(binario[i] + " ");
 }
