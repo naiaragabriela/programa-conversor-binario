@@ -4,7 +4,7 @@ int[] posicao = new int[8];
 Console.WriteLine("Informe um número: ");
 numero = int.Parse(Console.ReadLine());
 
-int binario (int numero) 
+int Binario (int numero) 
 {
     quociente = numero;
 
@@ -19,8 +19,8 @@ int binario (int numero)
         quociente = numero;
         numero = quociente;
 
-        return binario(numero - 1);
+        return Binario(numero - 1);
     }
 
 }
-Console.Write(binario(numero));
+Console.Write(Binario(numero));
