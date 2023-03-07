@@ -6,8 +6,8 @@ int[] convertido = new int[8];
 Console.WriteLine("Informe um número inteiro a ser convertido");
 valor = int.Parse(Console.ReadLine());
 
-convertido = converter(valor);
-int[] converter (int valor)
+convertido = Converter(valor);
+int[] Converter (int valor)
 {
     quociente = valor;
     for (int i = 0; i < binario.Length; i++)
